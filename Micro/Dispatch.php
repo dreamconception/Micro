@@ -78,7 +78,7 @@ class Dispatch
 		}
 
 		// If this is not a valid, safe path (more complex params belong in GET/POST)
-		if($path AND ! preg_match('/^[\w\-~\/\.]{1,400}$/', $path))
+		if($path AND ! preg_match('/^[\w\-~\/\.%]{1,400}$/', $path))
 		{
 			$path = '404';
 		}
